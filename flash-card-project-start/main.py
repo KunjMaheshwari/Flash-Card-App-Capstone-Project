@@ -29,7 +29,7 @@ def flip_card():
     card_front.itemconfig(card_text, text="English", fill="white")
     card_front.itemconfig(
         card_word, text=current_card["English"], fill="white")
-    card_front.itemconfig(card_background, image=inser_backimage)
+    card_front.itemconfig(card_background, image=insert_backimage)
 
 
 def is_known():
@@ -50,7 +50,7 @@ flip_timer = window.after(3000, func=flip_card)
 card_front = Canvas(width=800, height=526,
                     bg=BACKGROUND_COLOR, highlightthickness=0)
 insert_image = PhotoImage(file="images/card_front.png")
-inser_backimage = PhotoImage(file="images/card_back.png")
+insert_backimage = PhotoImage(file="images/card_back.png")
 card_background = card_image = card_front.create_image(
     400, 263, image=insert_image)
 card_text = card_front.create_text(
